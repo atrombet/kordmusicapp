@@ -1,9 +1,45 @@
-.appStoreBadge {
-  background-image: url("../assets/images/app-store-badge.png");
-  background-repeat: no-repeat;
+/* All in one selector */
+
+.kordContainer {
+  padding: 5%;
+  height: 100vh;
 }
 
-.appStoreBadge {
-  background-image: url("../assets/images/google-play-badge.png");
-  background-repeat: no-repeat;
+.image {
+  display: block;
+  flex-basis: auto;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+.logoImage {
+  @extend .image;
+  background: url("../assets/images/Kord.png") no-repeat;
+  background-size: contain;
+  height: 15vh;
+  width: auto;
+}
+
+.phoneMock {
+  @extend .image;
+  background: url("../assets/images/iPhone7Mock.png") no-repeat;
+  background-size: contain;
+  height: 80vh;
+}
+
+
+.appStoreBadge {
+  @extend .image;
+  background: url("../assets/images/app-store-badge.png") no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: auto;
+}
+
+.googlePlayBadge {
+  @extend .image;
+  background: url("../assets/images/google-play-badge.png") no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: auto;
+}
+
