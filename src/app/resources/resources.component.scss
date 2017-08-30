@@ -5,9 +5,13 @@
 }
 
 .resources__topicHeader {
-  margin: 0;
+  text-transform: lowercase;
+  font-size: 20px;
 }
 
-.resources__topicHeader--noPadding {
-  padding: 0;
+.resources__subtopicHeader {
+  text-transform: lowercase;
+  font-size: 18px;
 }
+
+

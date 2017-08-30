@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-resources',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resources.component.scss']
 })
 export class ResourcesComponent implements OnInit {
+  @ViewChild('collapsed') private _addIcon: TemplateRef<any>;
+  @ViewChild('expanded') private _removeIcon: TemplateRef<any>;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public get addIcon(): TemplateRef<any> {
+    return this._addIcon;
+  }
+
+  public get removeIcon(): TemplateRef<any> {
+    return this._removeIcon;
   }
 
 }
