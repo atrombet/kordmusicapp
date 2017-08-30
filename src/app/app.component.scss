@@ -1,82 +1,53 @@
-.kordContainer {
-  padding: 5%;
-  height: 100vh;
+@import "../variables";
+
+nav {
+  background-color: $transparent;
+  box-shadow: none;
 }
 
-.leftContainer {
-  margin-left: 8vw;
+nav ul a {
+  background-color: $transparent;
+  &:hover {
+    background-color: $transparent;
+  }
 }
 
-.image {
-  display: block;
-  flex-basis: auto;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-size: contain;
-  background-position: center;
+.kordNavContainer {
+  width: 90%;
 }
 
-.logoImage {
-  @extend .image;
-  background-image: url("../assets/images/Kord.png");
-  background-repeat: no-repeat;
-  height: 15vh;
-  width: auto;
-  margin-top: 20vh;
-  margin-bottom: 5vh;
-}
-
-.phoneMock {
-  @extend .image;
-  background-image: url("../assets/images/iPhone7Mock.png");
-  background-repeat: no-repeat;
-  height: 80vh;
-}
-
-
-.appStoreBadge {
-  @extend .image;
-  background-image: url("../assets/images/appleBadge.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  cursor: pointer;
-  height: 50px;
+.kordBrandLogo {
+  vertical-align: middle;
+  line-height: 64px;
+  height: 36px;
   width: auto;
 }
 
-.googlePlayBadge {
-  @extend .image;
-  background-image: url("../assets/images/googleBadge.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  cursor: pointer;
-  height: 50px;
-  width: auto;
+.kordNavItems > li a {
+  font-size: 18px;
 }
 
-@media all and (max-width: 1024px) and (min-width: 601px) {
-  .leftContainer {
-    margin-left: 0;
-  }
-}
+.kordNav__item {
+  border-bottom: 1px solid $transparent;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 
-@media all and (max-width: 600px) and (min-width: 200px) {
-  .leftContainer {
-    margin-left: 0;
-  }
-
-  .logoImage {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .appStoreBadge {
-    margin-bottom: 3vh;
-    background-position: center;
+  &:hover {
+    background-color: $transparent;
+    border-bottom: 1px solid $kord-text-color;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
 
-  .googlePlayBadge {
-    margin-bottom: 3vh;
-    background-position: center;
+  &.active-page {
+    border-bottom: 1px solid $kord-text-color;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

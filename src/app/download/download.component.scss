@@ -1,0 +1,84 @@
+@import "../../variables";
+
+.download__container {
+  padding: 2.5% 5%;
+  height: calc(100vh - #{$kord-header-height});
+}
+
+.download__leftContainer {
+  margin-left: 8vw;
+}
+
+.download__image {
+  display: block;
+  flex-basis: auto;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center;
+}
+
+.logoImage {
+  @extend .download__image;
+  background-image: url("../../assets/images/Kord.png");
+  background-repeat: no-repeat;
+  height: 15vh;
+  width: auto;
+  margin-top: 20vh;
+  margin-bottom: 5vh;
+}
+
+.phoneMock {
+  @extend .download__image;
+  background-image: url("../../assets/images/iPhone7Mock.png");
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+
+
+.appStoreBadge {
+  @extend .download__image;
+  background-image: url("../../assets/images/appleBadge.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  cursor: pointer;
+  height: 50px;
+  width: auto;
+}
+
+.googlePlayBadge {
+  @extend .download__image;
+  background-image: url("../../assets/images/googleBadge.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  cursor: pointer;
+  height: 50px;
+  width: auto;
+}
+
+@media all and (max-width: 1024px) and (min-width: 601px) {
+  .download__leftContainer {
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 600px) and (min-width: 200px) {
+  .download__leftContainer {
+    margin-left: 0;
+  }
+
+  .logoImage {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .appStoreBadge {
+    margin-bottom: 3vh;
+    background-position: center;
+  }
+
+  .googlePlayBadge {
+    margin-bottom: 3vh;
+    background-position: center;
+  }
+}

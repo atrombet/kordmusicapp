@@ -4,7 +4,7 @@ import { DownloadComponent } from './download/download.component';
 import { ResourcesComponent } from './resources/resources.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/download'},
+  {path: '', redirectTo: '/download', pathMatch: 'full'},
   {path: 'download', component: DownloadComponent},
   {path: 'resources', component: ResourcesComponent}
 ];
