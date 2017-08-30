@@ -13,3 +13,21 @@ body {
   color: $kord-text-color;
 }
 
+// Override default maerialize and set the theme colors and borders for kord collapsible tables.
+.collapsible, .collapsible-header, .collapsible-body {
+  background-color: $transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.collapsible-header {
+  border-bottom: 1px solid $kord-text-color;
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+
