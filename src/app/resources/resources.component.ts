@@ -1,4 +1,4 @@
-import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, TemplateRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-resources',
@@ -9,7 +9,7 @@ export class ResourcesComponent implements OnInit {
   @ViewChild('collapsed') private _addIcon: TemplateRef<any>;
   @ViewChild('expanded') private _removeIcon: TemplateRef<any>;
 
-  constructor() { }
+  public constructor() { }
 
   ngOnInit() { }
 
@@ -20,5 +20,6 @@ export class ResourcesComponent implements OnInit {
   public get removeIcon(): TemplateRef<any> {
     return this._removeIcon;
   }
+
 
 }

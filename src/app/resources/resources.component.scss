@@ -14,4 +14,22 @@
   font-size: 18px;
 }
 
+.resources__expandIcon {
+  opacity: 0.25;
+}
+
+.resources__bulletList {
+  list-style-position: inside;
+}
+
+ul.resources__bulletList > li {
+  list-style-type: disc;
+}
+
+.resources__chart {
+  max-width: 366px;
+  width: 100%;
+  height: auto;
+}
+
 
