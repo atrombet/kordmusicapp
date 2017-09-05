@@ -32,4 +32,9 @@ ul.resources__bulletList > li {
   height: auto;
 }
 
+.resources__symbolsChart {
+  @extend .resources__chart;
+  max-width: 250px;
+}
+
 
