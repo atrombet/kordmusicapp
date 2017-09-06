@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-resources',
@@ -6,20 +6,41 @@ import {Component, ElementRef, OnInit, TemplateRef, ViewChild} from '@angular/co
   styleUrls: ['./resources.component.scss']
 })
 export class ResourcesComponent implements OnInit {
-  @ViewChild('collapsed') private _addIcon: TemplateRef<any>;
-  @ViewChild('expanded') private _removeIcon: TemplateRef<any>;
 
-  public constructor() { }
+  private _introExpanded: boolean;
+  private _theBasicsExpanded: boolean;
+  private _chartsExpanded: boolean;
+
+  public constructor() {
+    this._introExpanded = false;
+    this._theBasicsExpanded = false;
+    this._chartsExpanded = false;
+  }
 
   ngOnInit() { }
 
-  public get addIcon(): TemplateRef<any> {
-    return this._addIcon;
+  public onIntroHeaderClick(): void {
+    this._introExpanded = !this._introExpanded;
   }
 
-  public get removeIcon(): TemplateRef<any> {
-    return this._removeIcon;
+  public onTheBasicsHeaderClick(): void {
+    this._theBasicsExpanded = !this._theBasicsExpanded;
   }
 
+  public onChartsHeaderClick(): void {
+    this._chartsExpanded = !this._chartsExpanded;
+  }
+
+  public get introExpanded(): boolean {
+    return this._introExpanded;
+  }
+
+  public get theBasicsExpanded(): boolean {
+    return this._theBasicsExpanded;
+  }
+
+  public get chartsExpanded(): boolean {
+    return this._chartsExpanded;
+  }
 
 }

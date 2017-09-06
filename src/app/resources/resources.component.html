@@ -2,10 +2,10 @@
   <div class="row resources__container">
     <div class="col s12">
       <ul materialize="collapsible" data-collapsible="expandable">
-        <li>
+        <li (click)="onIntroHeaderClick()">
           <div class="collapsible-header resources__topicHeader">
             <div class="col left no-padding">intro</div>
-            <div class="col right no-padding"><i class="material-icons resources__expandIcon">add</i></div>
+            <div class="col right no-padding"><i class="material-icons resources__expandIcon">{{introExpanded ? 'remove' : 'add'}}</i></div>
           </div>
           <div class="collapsible-body">
             <div class="row">
@@ -28,10 +28,10 @@
             </ul>
           </div>
         </li>
-        <li>
+        <li (click)="onTheBasicsHeaderClick()">
           <div class="collapsible-header resources__topicHeader">
             <div class="col left no-padding">the basics</div>
-            <div class="col right no-padding"><div *ngIf="addIcon; then addIcon"></div></div>
+            <div class="col right no-padding"><i class="material-icons resources__expandIcon">{{theBasicsExpanded ? 'remove' : 'add'}}</i></div>
           </div>
           <div class="collapsible-body">
             <div>
@@ -107,10 +107,10 @@
             </div>
           </div>
         </li>
-        <li>
+        <li (click)="onChartsHeaderClick()">
           <div class="collapsible-header resources__topicHeader">
             <div class="col left no-padding">charts</div>
-            <div class="col right no-padding"><i class="material-icons resources__expandIcon">add</i></div>
+            <div class="col right no-padding"><i class="material-icons resources__expandIcon">{{chartsExpanded ? 'remove' : 'add'}}</i></div>
           </div>
           <div class="collapsible-body">
             <div>
