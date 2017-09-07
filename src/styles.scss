@@ -1,5 +1,6 @@
 @import "variables";
 
+// Styles to apply to the entire document.
 html {
   font-family: Avenir;
   background: url("assets/images/background3000.png") no-repeat center center fixed;
@@ -10,8 +11,15 @@ html {
   background-size: cover;
 }
 
+
+// Set all the site text to white.
 body {
   color: $kord-text-color;
+}
+
+// Make sure that icons are getting the pointer cursor.
+a > i {
+  cursor: pointer;
 }
 
 // Override default maerialize and set the theme colors and borders for kord collapsible tables.
@@ -29,6 +37,20 @@ body {
 
 .no-margin {
   margin: 0;
+}
+
+.side-nav {
+  font-family: Avenir;
+  background: url("assets/images/nav_menu_background.png") no-repeat center center fixed;
+  background-color: $kord-html-background-color;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.side-nav > li {
+  font-size: 18px;
 }
 
 
