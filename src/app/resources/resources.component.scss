@@ -31,7 +31,8 @@ ul.resources__bulletList > li {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .resources__chart {
@@ -44,6 +45,11 @@ ul.resources__bulletList > li {
 .resources__symbolsChart {
   @extend .resources__chart;
   max-width: 250px;
+}
+
+.resources__chartExample {
+  @extend .resources__chart;
+  max-width: 350px;
 }
 
 
