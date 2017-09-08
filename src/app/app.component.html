@@ -2,8 +2,11 @@
   <div class="nav-wrapper">
     <div class="container">
       <ul id="slide-out" class="side-nav kord__sideNav">
-        <li class="kord__sideNav--header">
-          <a routerLink="/download" class="brand-logo left"><img class="kordBrandLogo" src="../assets/KordBrandLogo.png"></a>
+        <div class="kord__transparentLogoContainer"><img class="kord__transparentLogo" src="../assets/images/kordGlyphWhite.png"></div>
+        <li>
+          <div class="kord__sideNav--header">
+            <a routerLink="/download" class="brand-logo left"><img class="kordBrandLogo" src="../assets/KordBrandLogo.png"></a>
+          </div>
         </li>
         <li>
           <a routerLink="/download" class="">download</a>
@@ -12,7 +15,12 @@
           <a routerLink="/resources" class="">resources</a>
         </li>
       </ul>
-      <a data-activates="slide-out" materialize="sideNav" class="button-collapse show-on-medium-and-down"><i class="material-icons">menu</i></a>
+      <a data-activates="slide-out"
+         materialize="sideNav"
+         [materializeParams]="[{closeOnClick: true}]"
+         class="button-collapse show-on-medium-and-down">
+        <i class="material-icons">menu</i>
+      </a>
       <a routerLink="/download" class="brand-logo"><img class="kordBrandLogo" src="../assets/KordBrandLogo.png"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down kordNavItems">
         <li><a><span routerLink="/download" routerLinkActive="active-page" class="kordNav__item">download</span></a></li>

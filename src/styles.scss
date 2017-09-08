@@ -39,26 +39,4 @@ a > i {
   margin: 0;
 }
 
-.kord__sideNav {
-  font-family: Avenir;
-  color: $kord-text-color;
-  background: url("assets/images/nav_menu_background.png") no-repeat center center fixed;
-  background-color: $kord-html-background-color;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.kord__sideNav > li a {
-  font-size: 18px;
-  color: $kord-text-color;
-}
-
-.kord__sideNav--header {
-  height: 48px;
-  padding-left: 48px;
-  margin-bottom: 12px;
-}
-
 

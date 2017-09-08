@@ -23,6 +23,48 @@ nav ul a {
   width: auto;
 }
 
+.kord__sideNav {
+  font-family: Avenir;
+  color: $kord-text-color;
+  background: url("../assets/images/nav_menu_background.png") no-repeat;
+  background-color: $kord-html-background-color;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: none;
+  overflow-y: hidden;
+}
+
+.kord__sideNav > li a {
+  font-size: 18px;
+  color: $kord-text-color;
+}
+
+.kord__sideNav--header {
+  height: 48px;
+  padding-left: 48px;
+  margin-bottom: 12px;
+}
+
+.kord__transparentLogoContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: -1;
+}
+
+.kord__transparentLogo {
+  width: 200px;
+  height: auto;
+  opacity: 0.25;
+}
+
 .kordNavItems > li a {
   font-size: 18px;
 }
