@@ -1,12 +1,15 @@
 <nav>
   <div class="nav-wrapper">
     <div class="container">
-      <ul id="slide-out" class="side-nav kordNavItems">
-        <li>
-          <a routerLink="/download" class="kordNav__item">download</a>
+      <ul id="slide-out" class="side-nav kord__sideNav">
+        <li class="kord__sideNav--header">
+          <a routerLink="/download" class="brand-logo left"><img class="kordBrandLogo" src="../assets/KordBrandLogo.png"></a>
         </li>
         <li>
-          <a routerLink="/resources" class="kordNav__item">resources</a>
+          <a routerLink="/download" class="">download</a>
+        </li>
+        <li>
+          <a routerLink="/resources" class="">resources</a>
         </li>
       </ul>
       <a data-activates="slide-out" materialize="sideNav" class="button-collapse show-on-medium-and-down"><i class="material-icons">menu</i></a>

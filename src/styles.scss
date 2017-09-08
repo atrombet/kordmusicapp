@@ -39,7 +39,7 @@ a > i {
   margin: 0;
 }
 
-.side-nav {
+.kord__sideNav {
   font-family: Avenir;
   color: $kord-text-color;
   background: url("assets/images/nav_menu_background.png") no-repeat center center fixed;
@@ -50,8 +50,15 @@ a > i {
   background-size: cover;
 }
 
-.side-nav > li {
+.kord__sideNav > li a {
   font-size: 18px;
+  color: $kord-text-color;
+}
+
+.kord__sideNav--header {
+  height: 48px;
+  padding-left: 48px;
+  margin-bottom: 12px;
 }
 
 
