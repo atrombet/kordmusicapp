@@ -1,8 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+// Styles to apply to the entire document.
 html {
+  font-family: Avenir;
   background: url("assets/images/background3000.png") no-repeat center center fixed;
+  background-color: $kord-html-background-color;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
+
+// Set all the site text to white.
+body {
+  color: $kord-text-color;
+}
+
+// Make sure that icons are getting the pointer cursor.
+a > i {
+  cursor: pointer;
+}
+
+// Override default maerialize and set the theme colors and borders for kord collapsible tables.
+.collapsible, .collapsible-header, .collapsible-body {
+  background-color: $transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.collapsible-header {
+  border-bottom: 1px solid $kord-text-color;
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+
