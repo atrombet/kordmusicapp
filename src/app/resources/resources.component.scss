@@ -1,0 +1,55 @@
+@import "../../variables";
+
+.resources__container {
+  margin-top: $kord-content-margin;
+}
+
+.resources__topicHeader {
+  text-transform: lowercase;
+  font-size: 20px;
+}
+
+.resources__subtopicHeader {
+  text-transform: lowercase;
+  font-size: 18px;
+}
+
+.resources__expandIcon {
+  opacity: 0.35;
+}
+
+.resources__bulletList {
+  list-style-position: inside;
+}
+
+ul.resources__bulletList > li {
+  list-style-type: disc;
+}
+
+.resources__imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.resources__chart {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.resources__symbolsChart {
+  @extend .resources__chart;
+  max-width: 250px;
+}
+
+.resources__chartExample {
+  @extend .resources__chart;
+  max-width: 350px;
+}
+
+
