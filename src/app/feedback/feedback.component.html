@@ -1,0 +1,108 @@
+<div class="container">
+
+  <!-- TEMPLATE DRIVEN FORM -->
+  <!--<form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">-->
+
+    <!--<div class="input-field feedback__company">-->
+      <!--<input type="text" #company>-->
+    <!--</div>-->
+
+    <!--<div class="input-field">-->
+      <!--<label for="name">Name</label>-->
+      <!--<input type="text" id="name" required [(ngModel)]="messageModel.name" name="name">-->
+    <!--</div>-->
+
+    <!--<div class="input-field">-->
+      <!--<label for="emailAddress">Email Address</label>-->
+      <!--<input type="text" id="emailAddress" required [(ngModel)]="messageModel.email" name="email">-->
+    <!--</div>-->
+
+    <!--<div class="input-field">-->
+      <!--<label for="versionNumber">Version Number</label>-->
+      <!--<input type="text" id="versionNumber" [(ngModel)]="messageModel.versionNumber" name="versionNumber">-->
+    <!--</div>-->
+
+    <!--<div class="input-field">-->
+      <!--<select id="deviceTypeSelect" name="deviceTypeSelection"-->
+              <!--materialize="material_select" [(ngModel)]="messageModel.deviceType">-->
+        <!--<option *ngFor="let device of deviceTypes" [value]="device">{{ device }}</option>-->
+      <!--</select>-->
+      <!--<label for="deviceTypeSelect">Device Platform</label>-->
+    <!--</div>-->
+
+    <!--<div class="input-field">-->
+      <!--<select id="messageTypeSelect" name="messageTypeSelection"-->
+              <!--materialize="material_select" [(ngModel)]="messageModel.messageType">-->
+        <!--<option *ngFor="let type of messageTypes" [value]="type">{{ type }}</option>-->
+      <!--</select>-->
+      <!--<label for="messageTypeSelect">Message Type</label>-->
+    <!--</div>-->
+
+    <!--<div class="input-field">-->
+      <!--<textarea name="messageInput" id="messageText" class="materialize-textarea" [(ngModel)]="messageModel.message"></textarea>-->
+      <!--<label for="messageText">Message</label>-->
+    <!--</div>-->
+
+    <!--<button type="submit" class="btn btn-success">Submit</button>-->
+
+  <!--</form>-->
+
+  <!-- REACTIVE FORM -->
+  <h2>Hero Detail</h2>
+  <h3><i>Just a FormControl</i></h3>
+  <form [formGroup]="heroForm" novalidate>
+
+    <div class="form-group">
+      <label class="center-block">
+        Name:
+        <input class="form-control" formControlName="name">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="center-block">
+        Street:
+        <input class="form-control" formControlName="street">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="center-block">
+        City:
+        <input class="form-control" formControlName="city">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="center-block">
+        State:
+        <select class="form-control" formControlName="state">
+          <option *ngFor="let type of messageTypes" [value]="type">{{ type }}</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="center-block">
+        Zip Code:
+        <input class="form-control" formControlName="zip">
+      </label>
+    </div>
+
+    <div class="form-group radio">
+      <h4>Super power:</h4>
+      <label class="center-block"><input type="radio" formControlName="power" value="flight">Flight</label>
+      <label class="center-block"><input type="radio" formControlName="power" value="x-ray vision">X-ray vision</label>
+      <label class="center-block"><input type="radio" formControlName="power" value="strength">Strength</label>
+    </div>
+    <div class="checkbox">
+      <label class="center-block">
+        <input type="checkbox" formControlName="sidekick">I have a sidekick.
+      </label>
+    </div>
+
+  </form>
+  <p>Form value: {{ heroForm.value | json}}</p>
+  <p>Form status: {{ heroForm.status | json}}</p>
+
+</div>

@@ -6,19 +6,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DownloadComponent } from './download/download.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {EmailService} from "./services/EmailService";
 
 @NgModule({
   declarations: [
     AppComponent,
     DownloadComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterializeModule
+    MaterializeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
